@@ -43,7 +43,7 @@ You can also run these commands on your own:
 
 ### Windows APP
 
-There is currently no installation package, so compile it yourself. If I have time and desire I will create it: P
+There is currently no installation package, so compile it yourself. If I have time I will create it :P
 
 To allow the application to start with administrator rights without asking for confirmation, I created a windows task with the check mark "Run with the highest privileges"
 
