@@ -20,7 +20,7 @@ I created a WPF App with Visual Studio 2022 that uses the .NET Framework 4.7.2 w
 
 ## REQUIREMENTS
 
-The software already allows the system to be configured with specific keys, but requires that it be run with administrator rights.  
+The software already allows the system to be configured with specific buttons, but requires that it be run with administrator rights.  
 You can also run these commands on your own:
 
 - It is necessary to open the port 8080 on the Windows Firewall.
