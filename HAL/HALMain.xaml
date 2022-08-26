@@ -1,0 +1,26 @@
+﻿<Window x:Class="HAL.HALMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HAL"
+        mc:Ignorable="d"
+        
+        Closing="Window_Closing" StateChanged="Window_StateChanged" IsVisibleChanged="Window_IsVisibleChanged"
+        Loaded="Window_Loaded"
+        Title="Home Assistant Listener" Height="600" Width="900" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="txtLog"  Margin="10,315,10,10" TextWrapping="Wrap" Text="" Background="Black" Foreground="#FF229218" Padding="10" BorderBrush="Black" FontFamily="Cascadia Mono" VerticalScrollBarVisibility="Visible" />
+        <Button x:Name="btnStartListener" Content="Start" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Click="btnStartListener_Click"/>
+        <Button x:Name="btnConfigure_ACL" Content="Config ACL" HorizontalAlignment="Right" Height="24" Margin="0,10,188,0" VerticalAlignment="Top" Width="154" Click="btnConfigure_ACL_Click"/>
+        <Button x:Name="btnConfigure_Firewall" Content="Config FWL" HorizontalAlignment="Right" Height="24" Margin="0,10,10,0" VerticalAlignment="Top" Width="154" Click="btnConfigure_Firewall_Click"/>
+        <DataGrid x:Name="dg" Margin="10,39,10,274" AutoGenerateColumns="False" RowEditEnding="dg_RowEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Home Assistant key" Binding="{Binding key}" Width="150" />
+                <DataGridTextColumn Header="Command line" Binding="{Binding action}" Width="*" />
+                <DataGridTextColumn Header="Parameters" Binding="{Binding parameters}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

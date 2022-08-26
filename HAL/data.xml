@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<table>
+	<xs:schema id="table" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xs:element name="table" msdata:IsDataSet="true" msdata:MainDataTable="row" msdata:Locale="en-US">
+			<xs:complexType>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="row">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="key" type="xs:string" minOccurs="0" />
+								<xs:element name="action" type="xs:string" minOccurs="0" />
+								<xs:element name="parameters" type="xs:string" minOccurs="0" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+	</xs:schema>
+	<row>
+		<key>monitor_external</key>
+		<action>%windir%\System32\DisplaySwitch.exe /external</action>
+		<parameters></parameters>
+	</row>
+	<row>
+		<key>monitor_internal</key>
+		<action>%windir%\System32\DisplaySwitch.exe /internal</action>
+		<parameters></parameters>
+	</row>
+</table>
