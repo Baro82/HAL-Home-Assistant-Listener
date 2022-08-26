@@ -31,7 +31,7 @@ You can also run these commands on your own (totally optional):
   `netsh advfirewall firewall add rule name="Home Assistant Listener" dir=in action=allow protocol=TCP localport=8080`
   
   Remove the rule from Firewall:  
-  `The command for this: netsh advfirewall firewall delete rule name="Home Assistant Listener"`
+  `netsh advfirewall firewall delete rule name="Home Assistant Listener"`
   
 - It is necessary to reserve the url for incoming calls: http://*:8080/HAL/
 
