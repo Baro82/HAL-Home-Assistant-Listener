@@ -1,5 +1,7 @@
 # HAL - Home Assistant Listener
 
+![icon](https://user-images.githubusercontent.com/3686234/186933998-cf292bf1-424b-43a9-b3c4-42d644a513ae.png)
+
 ## Disclaimer
 
 This project was created for personal use, so:
@@ -64,3 +66,5 @@ Restart Home Assistant and if you want call some action on your PC you can call 
 Where `monitor_internal` is your command configured on the windows app.
 
 ![screenshot_app](https://user-images.githubusercontent.com/3686234/186932786-e1f7a64a-3913-404b-aec5-9ca3358a5fe4.jpg)
+
+
