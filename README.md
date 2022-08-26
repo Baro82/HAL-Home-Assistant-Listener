@@ -41,7 +41,6 @@ You can also run these commands on your own (totally optional):
   Remove the url:  
   `netsh http delete urlacl url=http://*:8080/HAL/`
   
-  That's it!
   
 ## INSTALLATION
 
