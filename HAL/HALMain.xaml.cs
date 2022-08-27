@@ -23,6 +23,12 @@ namespace HAL {
             InitServer();
             ReadDatabase();
             WindowState = WindowState.Minimized;
+
+            cmbListOfKeycodes.Items.Add("List of Key codes");
+            foreach (string k in Enum.GetNames(typeof(WindowsInput.Events.KeyCode))) {
+                cmbListOfKeycodes.Items.Add(k);
+            }
+            cmbListOfKeycodes.SelectedIndex = 0;
         }
 
 

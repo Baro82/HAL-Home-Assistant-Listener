@@ -20,11 +20,21 @@
 	<row>
 		<key>monitor_external</key>
 		<action>%windir%\System32\DisplaySwitch.exe /external</action>
-		<parameters></parameters>
+		<parameters />
 	</row>
 	<row>
 		<key>monitor_internal</key>
 		<action>%windir%\System32\DisplaySwitch.exe /internal</action>
-		<parameters></parameters>
+		<parameters />
+	</row>
+	<row>
+		<key>test_key</key>
+		<action>keyboard</action>
+		<parameters>LWIN+KEY_P-DOWN-DOWN-500ms-ESCAPE</parameters>
+	</row>
+	<row>
+		<key>test_key</key>
+		<action>keyboard</action>
+		<parameters>LWIN+R-2000ms-T-E-S-T-2000ms-ESCAPE</parameters>
 	</row>
 </table>

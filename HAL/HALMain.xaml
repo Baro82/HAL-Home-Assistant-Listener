@@ -10,17 +10,35 @@
         Loaded="Window_Loaded"
         Title="Home Assistant Listener" Height="600" Width="900" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox x:Name="txtLog"  Margin="10,315,10,10" TextWrapping="Wrap" Text="" Background="Black" Foreground="#FF229218" Padding="10" BorderBrush="Black" FontFamily="Cascadia Mono" VerticalScrollBarVisibility="Visible" />
+        <TextBox x:Name="txtLog"  Margin="10,383,10,0" TextWrapping="Wrap" Text="" Background="Black" Foreground="#FF229218" Padding="10" BorderBrush="Black" FontFamily="Cascadia Mono" VerticalScrollBarVisibility="Visible" Height="163" VerticalAlignment="Top" />
         <Button x:Name="btnStartListener" Content="Start" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Click="btnStartListener_Click"/>
         <Button x:Name="btnConfigure_ACL" Content="Config ACL" HorizontalAlignment="Right" Height="24" Margin="0,10,188,0" VerticalAlignment="Top" Width="154" Click="btnConfigure_ACL_Click"/>
         <Button x:Name="btnConfigure_Firewall" Content="Config FWL" HorizontalAlignment="Right" Height="24" Margin="0,10,10,0" VerticalAlignment="Top" Width="154" Click="btnConfigure_Firewall_Click"/>
-        <DataGrid x:Name="dg" Margin="10,39,10,274" AutoGenerateColumns="False" RowEditEnding="dg_RowEditEnding">
+        <DataGrid x:Name="dg" Margin="10,39,10,0" AutoGenerateColumns="False" RowEditEnding="dg_RowEditEnding" Height="216" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Home Assistant key" Binding="{Binding key}" Width="150" />
-                <DataGridTextColumn Header="Command line" Binding="{Binding action}" Width="*" />
+                <DataGridTextColumn Header="Program or Command" Binding="{Binding action}" Width="*" />
                 <DataGridTextColumn Header="Parameters" Binding="{Binding parameters}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
+
+        <TextBlock Margin="10,260,10,0" TextWrapping="Wrap" FontSize="14" Height="123" VerticalAlignment="Top" >
+            <Run FontWeight="Bold" FontSize="18">
+                Program or Command
+            </Run>
+            <LineBreak/>
+            <Run>
+                You can launch a specific file with parameters or simulate a keyboard combination.
+            </Run>
+            <LineBreak/><LineBreak/>
+            <Run FontWeight="Bold">Keyboard simulation:</Run> <Run>Fill "Program or Command" column with "keyboard" value, and parameters will be the list of keys to simulate.</Run>
+            <LineBreak/>
+            <Run>The format of keys must be:</Run> <Run FontFamily="Courier New" Foreground="MediumVioletRed" FontWeight="Bold">KEY+KEY-[millisecond]ms-KEY-KEY</Run>
+            <LineBreak/>
+            <Run>Example:</Run> <Run FontFamily="Courier New" Foreground="MediumVioletRed" FontWeight="Bold">LWIN+R-2000ms-T-E-S-T-2000ms-ESCAPE</Run>
+
+        </TextBlock>
+        <ComboBox x:Name="cmbListOfKeycodes" HorizontalAlignment="Right" Margin="0,354,10,0" Width="207" Height="24" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
